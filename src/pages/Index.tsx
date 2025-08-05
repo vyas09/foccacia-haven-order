@@ -180,28 +180,19 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-earth-brown mb-8">
               Our Story
             </h2>
-            <div className="space-y-6 text-lg text-soft-gray leading-relaxed">
-              <p className="text-xl font-semibold text-earth-brown">
+            <div className="text-lg text-soft-gray leading-relaxed">
+              <p className="text-xl font-semibold text-earth-brown mb-6">
                 One Dish. Endless Heart.
               </p>
               <p>
-                Welcome to a place where less is truly more.
-                At our restaurant, we serve just one dish—crafted with care, perfected with passion, and made to nourish both body and soul.
+                Welcome to a place where less is truly more. At our restaurant, we serve just one dish—crafted with care, perfected with passion, and made to nourish both body and soul. What started as a break from the corporate grind has turned into a commitment: to serve warmth, simplicity, and sincerity—one plate at a time.
               </p>
-              <p>
-                What started as a break from the corporate grind has turned into a commitment:
-                to serve warmth, simplicity, and sincerity—one plate at a time.
-              </p>
-              <p>
-                There's no menu, no fuss—just one honest dish we believe in.
-                It's not just food. It's a feeling.
-              </p>
-              <p>
-                From the heart. For your health. Always hot. Always home.
-              </p>
-              <p className="text-right italic">
-                Cheers,<br />
+              <p className="text-center italic my-6">
+                Warmly,<br />
                 Vikki
+              </p>
+              <p>
+                There's no menu, no fuss—just one honest dish we believe in. It's not just food. It's a feeling. From the heart. For your health. Always hot. Always home.
               </p>
             </div>
           </div>
