@@ -176,23 +176,34 @@ const Index = () => {
       {/* About Section */}
       <section ref={aboutRef} className="py-20 bg-gradient-warm">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-earth-brown mb-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-earth-brown mb-8 text-center">
               Our Story
             </h2>
-            <div className="text-lg text-soft-gray leading-relaxed">
-              <p className="text-xl font-semibold text-earth-brown mb-6">
+            <div className="pl-8 text-left space-y-6 text-lg text-soft-gray leading-relaxed">
+              <h2 className="text-2xl font-bold text-earth-brown">
                 One Dish. Endless Heart.
+              </h2>
+              <p>
+                Welcome to a place where less is truly more.
               </p>
               <p>
-                Welcome to a place where less is truly more. At our restaurant, we serve just one dish—crafted with care, perfected with passion, and made to nourish both body and soul. What started as a break from the corporate grind has turned into a commitment: to serve warmth, simplicity, and sincerity—one plate at a time.
+                At our restaurant, we serve just one dish—crafted with care, perfected with passion, and made to nourish both body and soul.
               </p>
-              <p className="text-center italic my-6">
-                Warmly,<br />
+              <p>
+                What started as a break from the corporate grind has turned into a commitment:<br />
+                to serve warmth, simplicity, and sincerity—one plate at a time.
+              </p>
+              <p>
+                There's no menu, no fuss—just one honest dish we believe in.<br />
+                It's not just food. It's a feeling.
+              </p>
+              <p>
+                From the heart. For your health. Always hot. Always home.
+              </p>
+              <p>
+                Cheers,<br />
                 Vikki
-              </p>
-              <p>
-                There's no menu, no fuss—just one honest dish we believe in. It's not just food. It's a feeling. From the heart. For your health. Always hot. Always home.
               </p>
             </div>
           </div>
