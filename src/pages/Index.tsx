@@ -218,15 +218,22 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Phone className="h-5 w-5 text-sage" />
-                    <span className="text-soft-gray">(555) 123-4567</span>
+                    <span className="text-soft-gray">00000000</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Mail className="h-5 w-5 text-sage" />
-                    <span className="text-soft-gray">hello@focacciahaven.com</span>
+                    <span className="text-soft-gray">Wich@foccaciahaven.com</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="h-5 w-5 text-sage" />
-                    <span className="text-soft-gray">Downtown Metropolitan Area</span>
+                    <a 
+                      href="https://maps.app.goo.gl/Yyk7R6Z15rwnrvnd7" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-soft-gray hover:text-sage transition-colors underline"
+                    >
+                      View Location on Maps
+                    </a>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Clock className="h-5 w-5 text-sage" />
