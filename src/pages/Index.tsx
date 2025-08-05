@@ -181,18 +181,27 @@ const Index = () => {
               Our Story
             </h2>
             <div className="space-y-6 text-lg text-soft-gray leading-relaxed">
-              <p>
-                Born from a passion for authentic Italian cuisine and Scandinavian simplicity, 
-                Focaccia Haven brings together the best of both worlds in the heart of the metropolitan area.
+              <p className="text-xl font-semibold text-earth-brown">
+                One Dish. Endless Heart.
               </p>
               <p>
-                Every morning, we hand-knead our focaccia dough using traditional techniques passed down 
-                through generations. We source our ingredients locally, supporting our community while 
-                ensuring the freshest flavors in every bite.
+                Welcome to a place where less is truly more.
+                At our restaurant, we serve just one dish—crafted with care, perfected with passion, and made to nourish both body and soul.
               </p>
               <p>
-                Our cozy kitchen operates on the principle of hygge – finding joy in simple, 
-                beautiful things. Each sandwich is not just a meal, but a moment of comfort and connection.
+                What started as a break from the corporate grind has turned into a commitment:
+                to serve warmth, simplicity, and sincerity—one plate at a time.
+              </p>
+              <p>
+                There's no menu, no fuss—just one honest dish we believe in.
+                It's not just food. It's a feeling.
+              </p>
+              <p>
+                From the heart. For your health. Always hot. Always home.
+              </p>
+              <p className="text-right italic">
+                Cheers,<br />
+                Vikki
               </p>
             </div>
           </div>
