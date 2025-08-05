@@ -18,6 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Scandinavian cafe themed variants
+        sage: "bg-sage text-primary-foreground hover:bg-sage-dark shadow-soft transition-all duration-300",
+        cream: "bg-cream text-earth-brown hover:bg-accent border border-sage/20 shadow-soft",
+        hero: "bg-gradient-to-r from-sage to-sage-light text-warm-white hover:from-sage-dark hover:to-sage shadow-floating transform hover:scale-105 transition-all duration-300 px-8 py-3 rounded-full font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",

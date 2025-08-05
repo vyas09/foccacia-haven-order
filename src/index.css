@@ -2,39 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Scandinavian Cafe Design System - Soothing, Natural Colors
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Scandinavian inspired color palette */
+    --background: 35 20% 96%;
+    --foreground: 25 15% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 25% 98%;
+    --card-foreground: 25 15% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 25% 98%;
+    --popover-foreground: 25 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sage green primary */
+    --primary: 95 25% 45%;
+    --primary-foreground: 35 25% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm cream secondary */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft neutral muted */
+    --muted: 35 15% 90%;
+    --muted-foreground: 25 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm beige accent */
+    --accent: 30 20% 88%;
+    --accent-foreground: 25 15% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 35 25% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 15% 85%;
+    --input: 35 15% 88%;
+    --ring: 95 25% 45%;
+
+    /* Custom Scandinavian tokens */
+    --sage: 95 25% 45%;
+    --sage-light: 95 20% 55%;
+    --sage-dark: 95 30% 35%;
+    --cream: 35 30% 92%;
+    --warm-white: 35 25% 98%;
+    --earth-brown: 25 15% 25%;
+    --soft-gray: 25 8% 50%;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--warm-white)), hsl(var(--cream)));
+    --gradient-sage: linear-gradient(135deg, hsl(var(--sage-light)), hsl(var(--sage)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--warm-white)) 0%, hsl(var(--cream)) 50%, hsl(var(--sage-light) / 0.1) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--sage) / 0.1);
+    --shadow-warm: 0 8px 30px hsl(var(--earth-brown) / 0.08);
+    --shadow-floating: 0 12px 40px hsl(var(--sage) / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --radius: 0.5rem;
 
