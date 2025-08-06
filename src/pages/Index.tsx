@@ -103,47 +103,80 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-warm-white via-cream to-sage-light/10">
+    <div className="min-h-screen bg-gradient-to-br from-warm-white via-cream to-sage-light/10 relative overflow-x-hidden">
+      {/* Floating decorative elements */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-floating rounded-full animate-float opacity-30"></div>
+        <div className="absolute top-96 right-20 w-24 h-24 bg-gradient-floating rounded-full animate-float opacity-20" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-96 left-1/4 w-40 h-40 bg-gradient-floating rounded-full animate-float opacity-25" style={{ animationDelay: '4s' }}></div>
+      </div>
+      
       <Header onScrollToSection={scrollToSection} />
       
-      {/* Hero Section */}
+      {/* Creative Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-earth-brown/60 via-transparent to-sage/40"></div>
+          <div className="absolute inset-0 bg-creative-mesh opacity-10"></div>
         </div>
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-warm-white mb-6 drop-shadow-lg">
-            Artisanal Focaccia
-            <span className="block text-cream text-3xl md:text-5xl mt-2">
-              Crafted with Love
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-warm-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+        {/* Floating bread icons */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-10 text-6xl animate-float opacity-20">🥖</div>
+          <div className="absolute top-1/3 right-16 text-4xl animate-float opacity-15" style={{ animationDelay: '1s' }}>🍞</div>
+          <div className="absolute bottom-1/4 left-1/4 text-5xl animate-float opacity-25" style={{ animationDelay: '3s' }}>🥐</div>
+          <div className="absolute bottom-1/3 right-1/4 text-3xl animate-float opacity-20" style={{ animationDelay: '2s' }}>🌿</div>
+        </div>
+        
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-slide-up">
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold text-warm-white mb-4 drop-shadow-lg">
+              <span className="inline-block animate-bounce-in">Artisanal</span>{" "}
+              <span className="text-gradient bg-gradient-to-r from-cream to-sage-light inline-block animate-bounce-in" style={{ animationDelay: '0.2s' }}>
+                Focaccia
+              </span>
+            </h1>
+            <div className="text-3xl md:text-5xl text-cream mt-2 animate-bounce-in" style={{ animationDelay: '0.4s' }}>
+              <span className="relative">
+                Crafted with Love
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cream to-transparent animate-shimmer"></div>
+              </span>
+            </div>
+          </div>
+          
+          <p className="text-xl md:text-2xl text-warm-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up glass-effect p-6 rounded-2xl" style={{ animationDelay: '0.6s' }}>
             Handcrafted focaccia sandwiches using locally sourced ingredients and traditional techniques
           </p>
-          <Button 
-            variant="hero" 
-            size="lg"
-            onClick={() => scrollToSection('menu')}
-            className="text-lg px-12 py-4"
-          >
-            Explore Our Menu
-          </Button>
+          
+          <div className="animate-slide-up" style={{ animationDelay: '0.8s' }}>
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => scrollToSection('menu')}
+              className="text-lg px-12 py-4 hover-lift animate-pulse-glow relative overflow-hidden group"
+            >
+              <span className="relative z-10">Explore Our Menu</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Menu Section */}
-      <section ref={menuRef} className="py-20 bg-warm-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-earth-brown mb-4">
-              Our Signature Sandwiches
-            </h2>
-            <p className="text-lg text-soft-gray max-w-2xl mx-auto">
+      {/* Creative Menu Section */}
+      <section ref={menuRef} className="py-20 bg-warm-white relative">
+        <div className="absolute inset-0 bg-creative-mesh opacity-5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-slide-up">
+            <div className="inline-block relative mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+                Our Signature Sandwiches
+              </h2>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-sage to-cream rounded-full"></div>
+            </div>
+            <p className="text-lg text-soft-gray max-w-2xl mx-auto glass-effect p-6 rounded-xl creative-border">
               Each sandwich is carefully crafted with fresh, premium ingredients on our house-made focaccia bread
             </p>
           </div>
@@ -173,59 +206,77 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section ref={aboutRef} className="py-20 bg-gradient-warm">
-        <div className="container mx-auto px-4">
+      {/* Creative About Section */}
+      <section ref={aboutRef} className="py-20 bg-gradient-warm relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-floating opacity-30"></div>
+        <div className="absolute top-10 right-10 text-8xl opacity-10 animate-float">🍃</div>
+        <div className="absolute bottom-20 left-10 text-6xl opacity-15 animate-float" style={{ animationDelay: '2s' }}>🌾</div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-earth-brown mb-8 text-center">
-              Our Story
-            </h2>
-            <div className="pl-8 text-left space-y-6 text-lg text-soft-gray leading-relaxed">
-              <h2 className="text-2xl font-bold text-earth-brown">
-                One Dish. Endless Heart.
+            <div className="text-center mb-12 animate-slide-up">
+              <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+                Our Story
               </h2>
-              <p>
+              <div className="w-16 h-1 bg-gradient-to-r from-sage to-earth-brown mx-auto rounded-full"></div>
+            </div>
+            <div className="glass-effect p-8 rounded-3xl creative-border animate-slide-up space-y-6 text-lg text-soft-gray leading-relaxed">
+              <h3 className="text-2xl font-bold text-gradient flex items-center gap-3">
+                <span className="animate-float">💝</span>
+                One Dish. Endless Heart.
+              </h3>
+              <p className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
                 Welcome to a place where less is truly more.
               </p>
-              <p>
+              <p className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
                 At our restaurant, we serve just one dish—crafted with care, perfected with passion, and made to nourish both body and soul.
               </p>
-              <p>
+              <p className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
                 What started as a break from the corporate grind has turned into a commitment:<br />
-                to serve warmth, simplicity, and sincerity—one plate at a time.
+                <span className="text-sage font-medium">to serve warmth, simplicity, and sincerity—one plate at a time.</span>
               </p>
-              <p>
+              <p className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
                 There's no menu, no fuss—just one honest dish we believe in.<br />
-                It's not just food. It's a feeling.
+                <span className="text-gradient font-semibold">It's not just food. It's a feeling.</span>
               </p>
-              <p>
+              <p className="animate-slide-up" style={{ animationDelay: '0.5s' }}>
                 From the heart. For your health. Always hot. Always home.
               </p>
-              <p>
-                Cheers,<br />
-                Vikki
-              </p>
+              <div className="animate-slide-up pt-4 border-t border-sage/20" style={{ animationDelay: '0.6s' }}>
+                <p className="text-sage font-medium">
+                  Cheers,<br />
+                  <span className="text-2xl font-bold text-gradient">Vikki</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section ref={contactRef} className="py-20 bg-warm-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-earth-brown mb-4">
+      {/* Creative Contact Section */}
+      <section ref={contactRef} className="py-20 bg-warm-white relative">
+        <div className="absolute inset-0 bg-creative-mesh opacity-5"></div>
+        <div className="absolute top-20 left-20 text-7xl opacity-10 animate-float">📞</div>
+        <div className="absolute bottom-20 right-20 text-6xl opacity-15 animate-float" style={{ animationDelay: '1s' }}>✉️</div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
               Get in Touch
             </h2>
-            <p className="text-lg text-soft-gray">
+            <div className="w-20 h-1 bg-gradient-to-r from-sage to-cream mx-auto rounded-full mb-6"></div>
+            <p className="text-lg text-soft-gray glass-effect p-4 rounded-xl inline-block">
               Ready to place an order or have questions? We'd love to hear from you!
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <Card className="bg-cream border-sage/20 shadow-soft">
+            <Card className="bg-cream border-sage/20 shadow-soft hover-lift creative-border animate-slide-up">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-earth-brown mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-semibold text-gradient mb-6 flex items-center gap-3">
+                  <span className="animate-float">📋</span>
+                  Contact Information
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Phone className="h-5 w-5 text-sage" />
@@ -254,9 +305,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-sage text-warm-white shadow-floating">
+            <Card className="bg-sage text-warm-white shadow-floating hover-lift animate-pulse-glow animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-6">Order by Phone</h3>
+                <h3 className="text-2xl font-semibold mb-6 flex items-center gap-3">
+                  <span className="animate-float">📱</span>
+                  Order by Phone
+                </h3>
                 <p className="text-sage-light mb-6 leading-relaxed">
                   Call us directly to place your order or discuss custom catering options. 
                   We're here to make your focaccia dreams come true!
